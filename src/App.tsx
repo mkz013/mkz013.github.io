@@ -1,121 +1,66 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { siteMeta } from './data/site'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      <div className="min-h-screen bg-[var(--bg-main)] text-[var(--text-main)]">
+        <main className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-6 py-8 md:px-10 md:py-10">
+          <section
+              id="home"
+              className="flex min-h-screen flex-col justify-center gap-10 py-10"
+          >
+            <div className="max-w-3xl">
+              <p className="mb-4 text-sm uppercase tracking-[0.28em] text-[var(--accent-primary)]">
+                {siteMeta.nickname}
+              </p>
 
-      <div className="ticks"></div>
+              <h1 className="max-w-4xl text-4xl font-semibold leading-tight md:text-6xl">
+                {siteMeta.title}
+              </h1>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+              <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--text-sub)] md:text-lg">
+                {siteMeta.intro}
+              </p>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+              <p className="mt-4 text-sm text-[var(--text-sub)]">
+                {siteMeta.location.join(' • ')}
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-4">
+              <a
+                  href={siteMeta.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-xl bg-[var(--accent-primary)] px-6 py-3 font-medium text-[#140d22] transition hover:bg-[var(--accent-glow)]"
+              >
+                View GitHub
+              </a>
+
+              <a
+                  href={`mailto:${siteMeta.email}`}
+                  className="rounded-xl border border-[color:rgba(201,168,255,0.2)] bg-[color:rgba(44,35,70,0.65)] px-6 py-3 font-medium text-[var(--text-main)] transition hover:border-[var(--accent-primary)] hover:text-[var(--accent-glow)]"
+              >
+                Contact Me
+              </a>
+            </div>
+
+            <div className="flex flex-wrap gap-3 text-sm text-[var(--text-sub)]">
+            <span className="rounded-full border border-[color:rgba(201,168,255,0.12)] px-4 py-2">
+              Cybersecurity
+            </span>
+              <span className="rounded-full border border-[color:rgba(201,168,255,0.12)] px-4 py-2">
+              Cloud
+            </span>
+              <span className="rounded-full border border-[color:rgba(201,168,255,0.12)] px-4 py-2">
+              Web Applications
+            </span>
+              <span className="rounded-full border border-[color:rgba(201,168,255,0.12)] px-4 py-2">
+              Automation
+            </span>
+            </div>
+          </section>
+        </main>
+      </div>
   )
 }
 

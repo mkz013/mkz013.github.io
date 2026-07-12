@@ -3,8 +3,8 @@ export const siteMeta = {
     nickname: 'mkz013',
     title: 'Cybersecurity student building practical and grounded solutions',
     intro:
-        'I focus on secure systems, cloud-aware engineering, and modern web development with an emphasis on clarity, maintainability, and real-world usefulness.',
-    location: 'Brugge, Belgium', 'Chișinău, Moldova',
+        'My work spans red teaming, security challenges, modern web development, and IoT, with a strong focus on maintainability, practical engineering, and real-world impact.',
+    location: ['Brugge, Belgium', 'Chișinău, Moldova'],
     availability: 'Open to internships, junior opportunities, and serious technical collaboration.',
     email: 'ochisorantonie@gmail.com',
     github: 'https://github.com/mkz013',

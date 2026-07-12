@@ -11,7 +11,7 @@ export function Hero() {
             <div className="max-w-3xl">
                 <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--border-soft)] bg-[rgba(36,29,54,0.45)] px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-[var(--text-sub)]">
                     <span className="h-2 w-2 rounded-full bg-[var(--accent-primary)]" />
-                    Open to serious opportunities
+                    Open to opportunities
                 </div>
 
                 <p className="mb-4 text-sm uppercase tracking-[0.28em] text-[var(--accent-primary)]">

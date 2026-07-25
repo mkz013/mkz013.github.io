@@ -1,4 +1,3 @@
-// Hero.tsx
 import { siteMeta } from '../data/site'
 
 const memoji = '/Memoji2.png'
@@ -7,31 +6,40 @@ export function Hero() {
     return (
         <section
             id="home"
-            className="flex min-h-screen flex-col justify-center gap-10 py-10 md:grid md:grid-cols-[1.05fr_0.95fr] md:items-center"
+            className="flex min-h-screen flex-col justify-center gap-12 py-10 md:grid md:grid-cols-[1.05fr_0.95fr] md:items-center"
         >
             <div className="max-w-3xl">
-                <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--border-soft)] bg-[rgba(36,29,54,0.45)] px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-[var(--text-sub)]">
+                <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--border-soft)] bg-[rgba(36,29,54,0.45)] px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-[var(--text-sub)]">
                     <span className="h-2 w-2 rounded-full bg-[var(--accent-primary)]" />
                     Open to opportunities
                 </div>
 
-                <p className="mb-4 text-sm font-medium uppercase tracking-[0.28em] text-[var(--accent-primary)]">
-                    {siteMeta.nickname}
-                </p>
+                {/* Nickname + heading grouped tightly — they're one visual unit */}
+                <div className="mb-6">
+                    <p className="mb-3 flex items-center gap-3 text-sm font-medium uppercase tracking-[0.28em] text-[var(--accent-primary)]">
+                        <span className="h-px w-6 bg-[var(--accent-primary)]" />
+                        {siteMeta.nickname}
+                    </p>
 
-                <h1 className="max-w-3xl text-4xl font-semibold leading-[1.1] tracking-[-0.03em] md:text-5xl">
-                    {siteMeta.title}
-                </h1>
+                    <h1 className="max-w-3xl text-4xl font-semibold leading-[1.15] tracking-[-0.03em] md:text-5xl">
+                        {siteMeta.title}
+                    </h1>
+                </div>
 
-                <p className="mt-5 max-w-xl text-lg leading-8 text-[var(--text-sub)]">
-                    {siteMeta.intro}
-                </p>
+                {/* Intro + location grouped as "about me" block, separated from heading above */}
+                <div className="space-y-3">
+                    <p className="max-w-xl text-lg leading-8 text-[var(--text-sub)]">
+                        {siteMeta.intro}
+                    </p>
 
-                <p className="mt-4 text-base leading-7 text-[var(--text-soft)]">
-                    {siteMeta.location.join(' • ')}
-                </p>
+                    <p className="flex items-center gap-2 text-base leading-7 text-[var(--text-soft)]">
+                        <span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--accent-primary)]" />
+                        {siteMeta.location.join(' • ')}
+                    </p>
+                </div>
 
-                <div className="mt-8 flex flex-wrap gap-4">
+                {/* Actions — clear jump from reading content to interactive content */}
+                <div className="mt-10 flex flex-wrap gap-4">
                     <a
                         href={siteMeta.github}
                         target="_blank"
@@ -58,19 +66,22 @@ export function Hero() {
                     </a>
                 </div>
 
-                <div className="mt-10 flex flex-wrap gap-3 text-base text-[var(--text-sub)]">
-                    <span className="rounded-full border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.36)] px-4 py-2">
-                        Red Teaming
-                    </span>
-                    <span className="rounded-full border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.36)] px-4 py-2">
-                        Security Challenges
-                    </span>
-                    <span className="rounded-full border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.36)] px-4 py-2">
-                        Web Development
-                    </span>
-                    <span className="rounded-full border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.36)] px-4 py-2">
-                        IoT
-                    </span>
+                {/* Tags — separated with a thin divider so they read as "topics", not more body text */}
+                <div className="mt-10 border-t border-[rgba(213,193,255,0.08)] pt-6">
+                    <div className="flex flex-wrap gap-3 text-base text-[var(--text-sub)]">
+                        <span className="rounded-full border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.36)] px-4 py-2">
+                            Red Teaming
+                        </span>
+                        <span className="rounded-full border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.36)] px-4 py-2">
+                            Security Challenges
+                        </span>
+                        <span className="rounded-full border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.36)] px-4 py-2">
+                            Web Development
+                        </span>
+                        <span className="rounded-full border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.36)] px-4 py-2">
+                            IoT
+                        </span>
+                    </div>
                 </div>
             </div>
 

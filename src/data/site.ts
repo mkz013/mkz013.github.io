@@ -3,7 +3,7 @@ export const siteMeta = {
     nickname: 'mkz013',
     title: 'Cybersecurity student building practical and grounded solutions',
     intro:
-        'My work spans red teaming, security challenges, modern web development, and IoT, with a strong focus on maintainability, practical engineering, and real-world impact.',
+        'My work centers on offensive security and malware analysis, bridging red and blue perspectives to understand systems from both sides. I am building deeper skills in reverse engineering while staying grounded in practical engineering, web development, and IoT.',
     location: ['Brugge, Belgium', 'Chișinău, Moldova'],
     availability: 'Open to internships, junior opportunities, and serious technical collaboration.',
     email: 'ochisorantonie@gmail.com',

@@ -1,75 +1,64 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+- **Filterable project grid** — browse projects by category (AI & Voice, Security Engineering, Web Development, Penetration Testing, Mobile Security)
+- **Custom design system** — consistent color tokens and typography scale defined via CSS variables in `index.css`
+- **Responsive layout** — mobile-first design with adaptive grid layouts for larger screens
+- **Direct contact and CV access** — GitHub, email, and downloadable CV linked from the hero section
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Getting Started
 
-## React Compiler
+### Prerequisites
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js 18+
+- npm or pnpm
 
-## Expanding the ESLint configuration
+### Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone https://github.com/mkz013/[ePortfolio].git
+cd [ePortfolio]
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run dev
 ```
+
+Runs the app locally at `http://localhost:5173` with hot module reloading.
+
+### Build
+
+```bash
+npm run build
+```
+
+Outputs a production-ready build to the `dist/` folder.
+
+### Preview production build
+
+```bash
+npm run preview
+```
+
+## Adding a New Project
+
+Edit `src/data/projects.ts` and add a new entry following the existing shape (title, category, year, description, details, techStack, githubLink, liveLink, isStudentProject).
+
+## Customization
+
+Site-wide text (name, title, intro, availability, contact links) lives in `src/data/site.ts` — update this file to change hero content without touching component code.
+
+Color palette and spacing tokens are defined as CSS custom properties in `src/index.css` under `:root`, making theme adjustments centralized and consistent across all sections.
+
+## Contact
+
+- **Email:** ochisorantonie@gmail.com
+- **GitHub:** [github.com/mkz013](https://github.com/mkz013)
+- **LinkedIn:** [linkedin.com/in/mkz013](https://www.linkedin.com/in/mkz013)
+
+## License
+
+This project is personal portfolio code. Feel free to reference the structure, but please don't reuse personal content or assets directly.

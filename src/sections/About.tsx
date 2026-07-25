@@ -3,18 +3,18 @@ export function About() {
     return (
         <section
             id="about"
-            className="grid gap-8 border-t border-[rgba(213,193,255,0.08)] py-20 md:grid-cols-[0.9fr_1.1fr] md:gap-12"
+            className="grid gap-6 border-t border-[rgba(213,193,255,0.08)] py-14 sm:gap-8 sm:py-16 md:grid-cols-[0.9fr_1.1fr] md:gap-12 md:py-20"
         >
             <div>
-                <p className="mb-4 text-sm font-medium uppercase tracking-[0.28em] text-[var(--accent-primary)]">
+                <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-[var(--accent-primary)] sm:mb-4 sm:text-sm sm:tracking-[0.28em]">
                     About
                 </p>
-                <h2 className="max-w-sm text-3xl font-semibold leading-tight tracking-[-0.03em] md:text-4xl">
+                <h2 className="max-w-sm text-2xl font-semibold leading-tight tracking-[-0.02em] sm:text-3xl sm:tracking-[-0.03em] md:text-4xl">
                     I care about depth, clarity, and building with intent.
                 </h2>
             </div>
 
-            <div className="space-y-6 text-lg leading-8 text-[var(--text-sub)]">
+            <div className="space-y-4 text-base leading-7 text-[var(--text-sub)] sm:space-y-6 sm:text-lg sm:leading-8">
                 <p>
                     I am drawn to technical work that requires both precision and curiosity. Whether I am exploring
                     how something can break or building how it should work, I enjoy understanding the details that sit

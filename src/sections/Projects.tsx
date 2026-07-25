@@ -1,3 +1,4 @@
+// Projects.tsx
 import { useMemo, useState } from 'react'
 import { projects } from '../data/projects'
 
@@ -24,29 +25,30 @@ export function Projects() {
     return (
         <section
             id="projects"
-            className="border-t border-[rgba(213,193,255,0.08)] py-20"
+            className="border-t border-[rgba(213,193,255,0.08)] py-14 sm:py-16 md:py-20"
         >
-            <div className="mb-10 flex flex-col gap-4 md:max-w-2xl">
-                <p className="text-sm font-medium uppercase tracking-[0.28em] text-[var(--accent-primary)]">
+            <div className="mb-7 flex flex-col gap-3 sm:mb-10 sm:gap-4 md:max-w-2xl">
+                <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--accent-primary)] sm:text-sm sm:tracking-[0.28em]">
                     Projects
                 </p>
 
-                <h2 className="text-3xl font-semibold leading-tight tracking-[-0.03em] md:text-4xl">
+                <h2 className="text-2xl font-semibold leading-tight tracking-[-0.02em] sm:text-3xl sm:tracking-[-0.03em] md:text-4xl">
                     Selected work across security, software, and systems.
                 </h2>
 
-                <p className="text-lg leading-8 text-[var(--text-sub)]">
+                <p className="text-base leading-7 text-[var(--text-sub)] sm:text-lg sm:leading-8">
                     A curated set of projects that reflect how I approach implementation,
                     analysis, and practical technical problem-solving.
                 </p>
             </div>
 
-            <div className="mb-8 flex flex-wrap gap-2">
+            {/* Filter pills: horizontal scroll on mobile instead of wrap-cramming */}
+            <div className="mb-6 -mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mb-8 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0 [&::-webkit-scrollbar]:hidden">
                 {categories.map((category) => (
                     <button
                         key={category}
                         onClick={() => setFilter(category)}
-                        className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+                        className={`shrink-0 whitespace-nowrap rounded-full px-3.5 py-2 text-xs font-medium transition sm:px-4 sm:text-sm ${
                             filter === category
                                 ? 'bg-[var(--accent-primary)] text-[#140d22]'
                                 : 'border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.3)] text-[var(--text-sub)] hover:border-[rgba(213,193,255,0.18)] hover:text-[var(--text-main)]'
@@ -57,71 +59,70 @@ export function Projects() {
                 ))}
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-4 sm:gap-5 md:grid-cols-2 md:gap-6">
                 {filteredProjects.map((project) => (
                     <article
                         key={project.id}
-                        className="group flex flex-col rounded-[1.75rem] border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.34)] p-7 shadow-[var(--shadow-soft)] transition hover:border-[rgba(213,193,255,0.18)] hover:bg-[rgba(36,29,54,0.46)]"
+                        className="group flex flex-col rounded-[1.25rem] border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.34)] p-5 shadow-[var(--shadow-soft)] transition hover:border-[rgba(213,193,255,0.18)] hover:bg-[rgba(36,29,54,0.46)] sm:rounded-[1.5rem] sm:p-6 md:rounded-[1.75rem] md:p-7"
                     >
-                        {/* Meta row: category + year + student badge, visually separated from title */}
-                        <div className="mb-5 flex flex-wrap items-center gap-2">
-                            <span className="rounded-full bg-[rgba(166,124,255,0.14)] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[var(--accent-glow)]">
+                        {/* Meta row: category + year + student badge */}
+                        <div className="mb-4 flex flex-wrap items-center gap-2 sm:mb-5">
+                            <span className="rounded-full bg-[rgba(166,124,255,0.14)] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-[var(--accent-glow)] sm:px-3 sm:text-xs">
                                 {project.category}
                             </span>
 
-                            <span className="rounded-full border border-[rgba(213,193,255,0.1)] px-3 py-1 text-xs font-medium text-[var(--text-sub)]">
+                            <span className="rounded-full border border-[rgba(213,193,255,0.1)] px-2.5 py-1 text-[11px] font-medium text-[var(--text-sub)] sm:px-3 sm:text-xs">
                                 {project.year}
                             </span>
 
                             {project.isStudentProject && (
-                                <span className="rounded-full border border-[rgba(213,193,255,0.1)] bg-[rgba(20,15,31,0.4)] px-3 py-1 text-xs font-medium text-[var(--text-sub)]">
+                                <span className="rounded-full border border-[rgba(213,193,255,0.1)] bg-[rgba(20,15,31,0.4)] px-2.5 py-1 text-[11px] font-medium text-[var(--text-sub)] sm:px-3 sm:text-xs">
                                     Student project
                                 </span>
                             )}
                         </div>
 
-                        {/* Title: largest, boldest, whitest — the clear anchor point */}
-                        <h3 className="text-2xl font-bold leading-tight tracking-[-0.02em] text-[var(--text-main)]">
+                        {/* Title */}
+                        <h3 className="text-xl font-bold leading-tight tracking-[-0.02em] text-[var(--text-main)] sm:text-2xl">
                             {project.title}
                         </h3>
 
-                        {/* Divider to visually separate title from body copy */}
-                        <div className="mt-4 mb-4 h-px w-full bg-[rgba(213,193,255,0.1)]" />
+                        <div className="mt-3 mb-3 h-px w-full bg-[rgba(213,193,255,0.1)] sm:mt-4 sm:mb-4" />
 
-                        {/* Summary: distinct label + clearly readable body text */}
+                        {/* Overview */}
                         <div className="space-y-1.5">
-                            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--accent-primary)]">
+                            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)] sm:text-xs sm:tracking-[0.14em]">
                                 Overview
                             </p>
-                            <p className="text-base leading-7 text-[var(--text-main)]">
+                            <p className="text-sm leading-6 text-[var(--text-main)] sm:text-base sm:leading-7">
                                 {project.description}
                             </p>
                         </div>
 
-                        {/* Details: separate label + slightly quieter tone, but still readable */}
-                        <div className="mt-4 space-y-1.5">
-                            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--accent-primary)]">
+                        {/* Details */}
+                        <div className="mt-3 space-y-1.5 sm:mt-4">
+                            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)] sm:text-xs sm:tracking-[0.14em]">
                                 Details
                             </p>
-                            <p className="text-base leading-7 text-[var(--text-sub)]">
+                            <p className="text-sm leading-6 text-[var(--text-sub)] sm:text-base sm:leading-7">
                                 {project.details}
                             </p>
                         </div>
 
-                        {/* Tech stack pushed lower, clearly its own row */}
-                        <div className="mt-6 flex flex-wrap gap-2">
+                        {/* Tech stack */}
+                        <div className="mt-5 flex flex-wrap gap-1.5 sm:mt-6 sm:gap-2">
                             {project.techStack.map((tech) => (
                                 <span
                                     key={tech}
-                                    className="rounded-full border border-[rgba(213,193,255,0.1)] bg-[rgba(20,15,31,0.42)] px-3 py-1.5 text-xs font-medium text-[var(--text-sub)]"
+                                    className="rounded-full border border-[rgba(213,193,255,0.1)] bg-[rgba(20,15,31,0.42)] px-2.5 py-1 text-[11px] font-medium text-[var(--text-sub)] sm:px-3 sm:py-1.5 sm:text-xs"
                                 >
                                     {tech}
                                 </span>
                             ))}
                         </div>
 
-                        {/* Links anchored at bottom with a top border to separate from content */}
-                        <div className="mt-6 flex flex-wrap gap-5 border-t border-[rgba(213,193,255,0.08)] pt-5 text-base font-medium">
+                        {/* Links */}
+                        <div className="mt-5 flex flex-wrap gap-4 border-t border-[rgba(213,193,255,0.08)] pt-4 text-sm font-medium sm:mt-6 sm:gap-5 sm:pt-5 sm:text-base">
                             <a
                                 href={project.githubLink}
                                 target="_blank"
@@ -147,7 +148,7 @@ export function Projects() {
             </div>
 
             {filteredProjects.length === 0 && (
-                <div className="py-12 text-center text-[var(--text-sub)]">
+                <div className="py-10 text-center text-[var(--text-sub)] sm:py-12">
                     No projects found in this category.
                 </div>
             )}

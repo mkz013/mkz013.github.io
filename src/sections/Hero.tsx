@@ -1,3 +1,4 @@
+// Hero.tsx
 import { siteMeta } from '../data/site'
 
 const memoji = '/Memoji2.png'
@@ -14,19 +15,19 @@ export function Hero() {
                     Open to opportunities
                 </div>
 
-                <p className="mb-4 text-sm uppercase tracking-[0.28em] text-[var(--accent-primary)]">
+                <p className="mb-4 text-sm font-medium uppercase tracking-[0.28em] text-[var(--accent-primary)]">
                     {siteMeta.nickname}
                 </p>
 
-                <h1 className="max-w-3xl text-4xl font-semibold leading-[1.05] tracking-[-0.04em] md:text-5xl">
+                <h1 className="max-w-3xl text-4xl font-semibold leading-[1.1] tracking-[-0.03em] md:text-5xl">
                     {siteMeta.title}
                 </h1>
 
-                <p className="mt-5 max-w-xl text-base leading-7 text-[var(--text-sub)] md:text-[1.05rem]">
+                <p className="mt-5 max-w-xl text-lg leading-8 text-[var(--text-sub)]">
                     {siteMeta.intro}
                 </p>
 
-                <p className="mt-4 text-sm text-[var(--text-soft)]">
+                <p className="mt-4 text-base leading-7 text-[var(--text-soft)]">
                     {siteMeta.location.join(' • ')}
                 </p>
 
@@ -57,19 +58,19 @@ export function Hero() {
                     </a>
                 </div>
 
-                <div className="mt-10 flex flex-wrap gap-3 text-sm text-[var(--text-sub)]">
-          <span className="rounded-full border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.36)] px-4 py-2">
-            Red Teaming
-          </span>
+                <div className="mt-10 flex flex-wrap gap-3 text-base text-[var(--text-sub)]">
                     <span className="rounded-full border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.36)] px-4 py-2">
-            Security Challenges
-          </span>
+                        Red Teaming
+                    </span>
                     <span className="rounded-full border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.36)] px-4 py-2">
-            Web Development
-          </span>
+                        Security Challenges
+                    </span>
                     <span className="rounded-full border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.36)] px-4 py-2">
-            IoT
-          </span>
+                        Web Development
+                    </span>
+                    <span className="rounded-full border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.36)] px-4 py-2">
+                        IoT
+                    </span>
                 </div>
             </div>
 

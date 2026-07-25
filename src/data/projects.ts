@@ -24,7 +24,7 @@ export const projects: Project[] = [
         description:
             'An experimental voice assistant project exploring speech-to-text, text-to-speech, wake-word ideas, and local AI interaction workflows.',
         techStack: ['Python', 'Whisper', 'Vosk', 'pyttsx3', 'PyAudio', 'JSON', 'NLP'],
-        githubLink: 'https://github.com/yourusername/lucy-voice-assistant',
+        githubLink: 'https://github.com/mkz013/lucy-voice-assistant',
         liveLink: '#',
         category: 'AI & Voice',
         year: '2025',
@@ -39,7 +39,7 @@ export const projects: Project[] = [
         description:
             'Dockerized honeypot API with ELK Stack integration, real-time logging, dashboards, and reverse proxying for malicious request analysis.',
         techStack: ['Docker', 'ELK Stack', 'Grafana', 'Python', 'Nginx', 'REST API', 'PHP'],
-        githubLink: 'https://github.com/yourusername/api-honeypot',
+        githubLink: 'https://github.com/mkz013/api-honeypot',
         liveLink: '#',
         category: 'Security Engineering',
         year: '2025',
@@ -54,7 +54,7 @@ export const projects: Project[] = [
         description:
             'Full-stack web application built with Next.js, TypeScript, and Tailwind CSS, with middleware and modern application structure.',
         techStack: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'ESLint', 'Middleware', 'Node.js'],
-        githubLink: 'https://github.com/yourusername/iplisse',
+        githubLink: 'https://github.com/mkz013/iplisse',
         liveLink: '#',
         category: 'Web Development',
         year: '2025',
@@ -69,7 +69,7 @@ export const projects: Project[] = [
         description:
             'Security assessments with CVSS-based reporting for real environments, including network analysis, vulnerability validation, and remediation guidance.',
         techStack: ['Nmap', 'Wireshark', 'Burp Suite', 'CVSS', 'Reporting', 'Network Scanning'],
-        githubLink: 'https://github.com/yourusername/pentest-reports',
+        githubLink: 'https://github.com/mkz013/pentest-reports',
         liveLink: '#',
         category: 'Penetration Testing',
         year: '2024',
@@ -84,7 +84,7 @@ export const projects: Project[] = [
         description:
             'Static and dynamic Android analysis work using reverse engineering and mobile security tooling for application review.',
         techStack: ['Ghidra', 'IDA Pro', 'JADX', 'APKTool', 'MobSF', 'Android', 'Java', 'Kotlin'],
-        githubLink: 'https://github.com/yourusername/mobile-security',
+        githubLink: 'https://github.com/mkz013/mobile-security',
         liveLink: '#',
         category: 'Mobile Security',
         year: '2024',
@@ -99,7 +99,7 @@ export const projects: Project[] = [
         description:
             'A web platform combining honeypot behavior, challenge design, and monitoring dashboards in a controlled learning environment.',
         techStack: ['Docker', 'Grafana', 'Linux', 'Python', 'CTF', 'PHP', 'Nginx'],
-        githubLink: 'https://github.com/yourusername/honeypot-ctf',
+        githubLink: 'https://github.com/mkz013/honeypot-ctf',
         liveLink: '#',
         category: 'Security Engineering',
         year: '2024',
@@ -114,7 +114,7 @@ export const projects: Project[] = [
         description:
             'A browser-based board game built from scratch, with custom game logic, tile handling, and hand-crafted visuals.',
         techStack: ['HTML5', 'CSS3', 'Vanilla JavaScript', 'Canvas'],
-        githubLink: 'https://github.com/yourusername/labyrinth-game',
+        githubLink: 'https://github.com/mkz013/labyrinth-game',
         liveLink: '#',
         category: 'Web Development',
         year: '2023',

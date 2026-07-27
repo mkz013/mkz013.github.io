@@ -10,4 +10,4 @@ export const siteMeta = {
     github: 'https://github.com/mkz013',
     linkedin: 'https://www.linkedin.com/in/mkz013',
     cvPath: '/Antonie-CV.pdf',
-} as const
+}

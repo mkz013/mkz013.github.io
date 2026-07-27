@@ -24,7 +24,7 @@ export const projects: Project[] = [
         description:
             'An experimental voice assistant project exploring speech-to-text, text-to-speech, wake-word ideas, and local AI interaction workflows.',
         techStack: ['Python', 'Whisper', 'Vosk', 'pyttsx3', 'PyAudio', 'JSON', 'NLP'],
-        githubLink: 'https://github.com/mkz013/lucy-voice-assistant',
+        githubLink: 'https://github.com/mkz013/Lucy',
         liveLink: '#',
         category: 'AI & Voice',
         year: '2025',
@@ -39,7 +39,7 @@ export const projects: Project[] = [
         description:
             'Dockerized honeypot API with ELK Stack integration, real-time logging, dashboards, and reverse proxying for malicious request analysis.',
         techStack: ['Docker', 'ELK Stack', 'Grafana', 'Python', 'Nginx', 'REST API', 'PHP'],
-        githubLink: 'https://github.com/mkz013/api-honeypot',
+        githubLink: 'https://github.com/mkz013/websecurity-honeypot',
         liveLink: '#',
         category: 'Security Engineering',
         year: '2025',
@@ -122,5 +122,35 @@ export const projects: Project[] = [
         isStudentProject: true,
         details:
             'An early project that helped build strong foundations in JavaScript, rendering, and interaction logic.',
+    },
+    {
+        id: 8,
+        title: 'Magic: The Gathering (MTG) Blazor Suite',
+        description:
+            'Interactive C# Blazor web application featuring Entity Framework Core, card filtering/search, custom collections, and session-state management.',
+        techStack: ['.NET 8', 'Blazor Server', 'C#', 'Entity Framework Core', 'LINQ', 'SQL Server', 'Bootstrap'],
+        githubLink: 'https://github.com/mkz013/blazor-mtg-server',
+        liveLink: '#',
+        category: 'Web Development',
+        year: '2024',
+        featured: true,
+        isStudentProject: true,
+        details:
+            'Built during an intensive 2-sprint academic module at Howest focusing on modern .NET fundamentals. Features a full relational data pipeline with EF Core/LINQ, interactive Blazor server UI, custom session management, and complex MTG card search/collection management.',
+    },
+    {
+        id: 9,
+        title: 'Ransomware & Wiper File Recovery Simulation',
+        description:
+            'A practical incident recovery project featuring malware attack simulations (AES-CBC, Base64, Wiper corruption), custom password brute-force scripts, and forensic file recovery.',
+        techStack: ['Python', 'AES-128', 'SHA-256', 'Linux', 'TestDisk', 'PhotoRec', 'Forensics', 'Cryptography'],
+        githubLink: 'https://github.com/mkz013/SSM_Scripts',
+        liveLink: '#',
+        category: 'Security Engineering',
+        year: '2025',
+        featured: true,
+        isStudentProject: true,
+        details:
+            'Developed as a Use Case Demonstration Paper (UCDP) project simulating file recovery after malware, ransomware, and wiper attacks on Linux environments. Demonstrates custom AES-CBC encryption/decryption, wordlist-driven brute-force attacks via SHA-256 key derivation, and forensic recovery using TestDisk, PhotoRec, extundelete, and ext4magic.',
     },
 ]

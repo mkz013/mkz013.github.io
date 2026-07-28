@@ -95,21 +95,6 @@ export const projects: Project[] = [
     },
     {
         id: 6,
-        title: 'Honeypot & CTF Platform',
-        description:
-            'A web platform combining honeypot behavior, challenge design, and monitoring dashboards in a controlled learning environment.',
-        techStack: ['Docker', 'Grafana', 'Linux', 'Python', 'CTF', 'PHP', 'Nginx'],
-        githubLink: 'https://github.com/mkz013/honeypot-ctf',
-        liveLink: '#',
-        category: 'Security Engineering',
-        year: '2024',
-        featured: false,
-        isStudentProject: true,
-        details:
-            'Combined attack logging, challenge deployment, and service monitoring into one defensive training platform.',
-    },
-    {
-        id: 7,
         title: 'Labyrinth Browser Game',
         description:
             'A browser-based board game built from scratch, with custom game logic, tile handling, and hand-crafted visuals.',
@@ -124,7 +109,7 @@ export const projects: Project[] = [
             'An early project that helped build strong foundations in JavaScript, rendering, and interaction logic.',
     },
     {
-        id: 8,
+        id: 7,
         title: 'Magic: The Gathering (MTG) Blazor Suite',
         description:
             'Interactive C# Blazor web application featuring Entity Framework Core, card filtering/search, custom collections, and session-state management.',
@@ -139,7 +124,7 @@ export const projects: Project[] = [
             'Built during an intensive 2-sprint academic module at Howest focusing on modern .NET fundamentals. Features a full relational data pipeline with EF Core/LINQ, interactive Blazor server UI, custom session management, and complex MTG card search/collection management.',
     },
     {
-        id: 9,
+        id: 8,
         title: 'Ransomware & Wiper File Recovery Simulation',
         description:
             'A practical incident recovery project featuring malware attack simulations (AES-CBC, Base64, Wiper corruption), custom password brute-force scripts, and forensic file recovery.',

@@ -65,18 +65,18 @@ export const projects: Project[] = [
     },
     {
         id: 4,
-        title: 'Real-World Penetration Testing',
+        title: 'Network System Pentesting — Course Audit Report',
         description:
-            'Security assessments with CVSS-based reporting for real environments, including network analysis, vulnerability validation, and remediation guidance.',
+            'Full technical audit of a custom, segmented network accessed via VPN, covering reconnaissance, vulnerability validation, and CVSS-based remediation guidance.',
         techStack: ['Nmap', 'Wireshark', 'Burp Suite', 'CVSS', 'Reporting', 'Network Scanning'],
-        githubLink: 'https://github.com/mkz013/pentest-reports',
+        githubLink: 'https://github.com/mkz013/NSPAudit',
         liveLink: '#',
         category: 'Penetration Testing',
-        year: '2024',
+        year: '2025',
         featured: true,
         isStudentProject: true,
         details:
-            'Included practical auditing work, technical reporting, and mitigation-oriented communication with stakeholders.',
+            'Recon-to-root engagement against a custom lab network: service enumeration, exploitation of misconfigured services, Linux privilege escalation, and cross-subnet lateral movement, with phased remediation guidance for stakeholders. Sensitive credentials and third-party details redacted from the public report.',
     },
     {
         id: 5,

@@ -80,18 +80,33 @@ export const projects: Project[] = [
     },
     {
         id: 5,
-        title: 'Mobile Security Analysis Suite',
+        title: 'PokeSec: Android Trojanization & Security Engineering',
         description:
-            'Static and dynamic Android analysis work using reverse engineering and mobile security tooling for application review.',
-        techStack: ['Ghidra', 'IDA Pro', 'JADX', 'APKTool', 'MobSF', 'Android', 'Java', 'Kotlin'],
-        githubLink: 'https://github.com/mkz013/mobile-security',
+            'A mobile security project focused on reverse engineering and trojanizing an Android application through Smali hook injection, payload integration, SSL pinning, root detection, and APK re-signing.',
+        techStack: ['Android', 'Kotlin', 'Java', 'Smali', 'APKTool', 'Frida', 'Metasploit', 'Room DB', 'EncryptedFile'],
+        githubLink: 'https://github.com/mkz013/PokeSecurity',
         liveLink: '#',
         category: 'Mobile Security',
-        year: '2024',
+        year: '2026',
+        featured: true,
+        isStudentProject: true,
+        details:
+            'Developed as part of the Mobile Security course. My primary contribution included architecting core application logic (repositories, Room DB interactions, authentication workflows, key pages) and implementing client-side defenses such as SSL pinning, root detection, and EncryptedFile storage. Additionally, I led the offensive analysis by backdooring the APK via APKTool, injecting a Metasploit payload at the Smali level, isolating execution in a dedicated background process (:pwned), and re-signing the trojanized application while preserving full functionality.',
+    },
+    {
+        id: 6,
+        title: 'Labyrinth Browser Game',
+        description:
+            'A browser-based board game built from scratch, with custom game logic, tile handling, and hand-crafted visuals.',
+        techStack: ['HTML5', 'CSS3', 'Vanilla JavaScript', 'Canvas'],
+        githubLink: 'https://github.com/mkz013/labyrinth-game',
+        liveLink: '#',
+        category: 'Web Development',
+        year: '2023',
         featured: false,
         isStudentProject: true,
         details:
-            'Focused on reverse engineering, permission review, code inspection, and vulnerability identification.',
+            'An early project that helped build strong foundations in JavaScript, rendering, and interaction logic.',
     },
     {
         id: 6,

@@ -12,7 +12,7 @@ type Filter =
 
 export function Projects() {
     const [filter, setFilter] = useState<Filter>('all')
-
+    const [selectedProject, setSelectedProject] = useState<(typeof projects)[number] | null>(null)
     const categories = useMemo(
         () => ['all', ...new Set(projects.map((project) => project.category))] as Filter[],
         []
@@ -63,8 +63,7 @@ export function Projects() {
                 {filteredProjects.map((project) => (
                     <article
                         key={project.id}
-                        className="group flex flex-col rounded-[1.25rem] border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.34)] p-5 shadow-[var(--shadow-soft)] transition hover:border-[rgba(213,193,255,0.18)] hover:bg-[rgba(36,29,54,0.46)] sm:rounded-[1.5rem] sm:p-6 md:rounded-[1.75rem] md:p-7"
-                    >
+                        className="group flex flex-col rounded-[1.25rem] border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.34)] p-4 shadow-[var(--shadow-soft)] transition hover:border-[rgba(213,193,255,0.18)] hover:bg-[rgba(36,29,54,0.46)] sm:rounded-[1.5rem] sm:p-6 md:rounded-[1.75rem] md:p-7">
                         {/* Meta row: category + year + student badge */}
                         <div className="mb-4 flex flex-wrap items-center gap-2 sm:mb-5">
                             <span className="rounded-full bg-[rgba(166,124,255,0.14)] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-[var(--accent-glow)] sm:px-3 sm:text-xs">
@@ -99,8 +98,8 @@ export function Projects() {
                             </p>
                         </div>
 
-                        {/* Details */}
-                        <div className="mt-3 space-y-1.5 sm:mt-4">
+                        {/* Details - Desktop only to keep mobile cards compact */}
+                        <div className="hidden sm:block mt-3 space-y-1.5 sm:mt-4">
                             <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)] sm:text-xs sm:tracking-[0.14em]">
                                 Details
                             </p>
@@ -114,8 +113,7 @@ export function Projects() {
                             {project.techStack.map((tech) => (
                                 <span
                                     key={tech}
-                                    className="rounded-full border border-[rgba(213,193,255,0.1)] bg-[rgba(20,15,31,0.42)] px-2.5 py-1 text-[11px] font-medium text-[var(--text-sub)] sm:px-3 sm:py-1.5 sm:text-xs"
-                                >
+                                    className="rounded-full border border-[rgba(213,193,255,0.1)] bg-[rgba(20,15,31,0.42)] px-2 py-0.5 text-[10px] font-medium text-[var(--text-sub)] sm:px-3 sm:py-1.5 sm:text-xs"                                >
                                     {tech}
                                 </span>
                             ))}

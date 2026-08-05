@@ -14,20 +14,20 @@ export function About() {
                 </h2>
             </div>
 
-            <div className="space-y-4 text-base leading-7 text-[var(--text-sub)] sm:space-y-6 sm:text-lg sm:leading-8">
-                <p>
+            <div className="flex flex-col gap-3.5 border-l-2 border-[var(--accent-primary)]/40 pl-3.5 text-sm sm:gap-6 sm:border-l-0 sm:pl-0 sm:text-lg">
+                <p className="leading-6 text-[var(--text-sub)] sm:leading-8">
                     I am drawn to technical work that requires both precision and curiosity. Whether I am exploring
                     how something can break or building how it should work, I enjoy understanding the details that sit
                     underneath the surface.
                 </p>
 
-                <p>
+                <p className="leading-6 text-[var(--text-sub)] sm:leading-8">
                     What interests me most is the balance between security, reliability, and clean implementation.
                     I value systems that are not only functional, but also understandable, maintainable, and realistic
                     to operate over time.
                 </p>
 
-                <p>
+                <p className="leading-6 text-[var(--text-sub)] sm:leading-8">
                     I approach projects with a practical mindset: learn the system, question assumptions, solve the
                     problem clearly, and leave the result in a better state than I found it.
                 </p>

@@ -109,21 +109,6 @@ export const projects: Project[] = [
             'An early project that helped build strong foundations in JavaScript, rendering, and interaction logic.',
     },
     {
-        id: 6,
-        title: 'Labyrinth Browser Game',
-        description:
-            'A browser-based board game built from scratch, with custom game logic, tile handling, and hand-crafted visuals.',
-        techStack: ['HTML5', 'CSS3', 'Vanilla JavaScript', 'Canvas'],
-        githubLink: 'https://github.com/mkz013/labyrinth-game',
-        liveLink: '#',
-        category: 'Web Development',
-        year: '2023',
-        featured: false,
-        isStudentProject: true,
-        details:
-            'An early project that helped build strong foundations in JavaScript, rendering, and interaction logic.',
-    },
-    {
         id: 7,
         title: 'Magic: The Gathering (MTG) Blazor Suite',
         description:

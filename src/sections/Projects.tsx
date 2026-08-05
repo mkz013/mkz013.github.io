@@ -62,7 +62,7 @@ export function Projects() {
             <div className="grid gap-4 sm:gap-5 md:grid-cols-2 md:gap-6">
                 {filteredProjects.map((project) => (
                     <article
-                        key={project.id}
+                        key={`${project.id}-${project.title}`}
                         onClick={() =>
                             setExpandedProjectId(
                                 expandedProjectId === project.id ? null : project.id

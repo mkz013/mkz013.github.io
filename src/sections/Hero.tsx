@@ -116,8 +116,7 @@ export function Hero() {
 
                 {/* Skill Pills Strip */}
                 <div className="mt-7 border-t border-[rgba(213,193,255,0.08)] pt-5 sm:mt-8 sm:pt-6 md:mt-10">
-                    <div className="flex flex-wrap gap-2 text-sm text-[var(--text-sub)] sm:gap-3 sm:text-base">
-                        <span className="rounded-full border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.36)] px-3 py-1.5 sm:px-4 sm:py-2">
+                    <div className="flex flex-wrap justify-center sm:justify-start gap-2 text-xs text-[var(--text-sub)] sm:gap-3 sm:text-base">                        <span className="rounded-full border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.36)] px-3 py-1.5 sm:px-4 sm:py-2">
                             Red Teaming
                         </span>
                         <span className="rounded-full border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.36)] px-3 py-1.5 sm:px-4 sm:py-2">

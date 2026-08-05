@@ -12,7 +12,7 @@ type Filter =
 
 export function Projects() {
     const [filter, setFilter] = useState<Filter>('all')
-    const [selectedProject, setSelectedProject] = useState<(typeof projects)[number] | null>(null)
+    const [expandedProjectId, setExpandedProjectId] = useState<number | null>(null)
     const categories = useMemo(
         () => ['all', ...new Set(projects.map((project) => project.category))] as Filter[],
         []
@@ -63,6 +63,12 @@ export function Projects() {
                 {filteredProjects.map((project) => (
                     <article
                         key={project.id}
+                        onClick={() =>
+                            setExpandedProjectId(
+                                expandedProjectId === project.id ? null : project.id
+                            )
+                        }
+
                         className="group flex flex-col rounded-[1.25rem] border border-[rgba(213,193,255,0.08)] bg-[rgba(36,29,54,0.34)] p-4 shadow-[var(--shadow-soft)] transition hover:border-[rgba(213,193,255,0.18)] hover:bg-[rgba(36,29,54,0.46)] sm:rounded-[1.5rem] sm:p-6 md:rounded-[1.75rem] md:p-7">
                         {/* Meta row: category + year + student badge */}
                         <div className="mb-4 flex flex-wrap items-center gap-2 sm:mb-5">
@@ -97,9 +103,16 @@ export function Projects() {
                                 {project.description}
                             </p>
                         </div>
+                        <div className="mt-2 text-[10px] font-medium text-[var(--accent-primary)] sm:hidden">
+                            {expandedProjectId === project.id ? 'Tap to collapse ▲' : 'Tap for details ▼'}
+                        </div>
 
-                        {/* Details - Desktop only to keep mobile cards compact */}
-                        <div className="hidden sm:block mt-3 space-y-1.5 sm:mt-4">
+                        {/* Details - Visible by default on desktop, toggleable on mobile */}
+                        <div
+                            className={`mt-3 space-y-1.5 sm:mt-4 sm:block ${
+                                expandedProjectId === project.id ? 'block' : 'hidden'
+                            }`}
+                        >
                             <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)] sm:text-xs sm:tracking-[0.14em]">
                                 Details
                             </p>
